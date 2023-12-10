@@ -51,7 +51,7 @@ pipeline {
 
         stage('Docker deployment in container') {
             steps {
-                sh "docker run -d -i -t --name hello_111 -p 8081:8081 mule-docker-hello"
+                sh "docker run -d -i -t --name hello_111 -p 8081:8081 mule-docker-hello:v1"
                 echo "Docker Container created..."
             }
         }
