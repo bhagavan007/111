@@ -19,7 +19,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh "mvn clean install -DskipTestsx"
+                sh "mvn clean install -DskipTests"
                 echo "Deployment Successfull..."
             }
         }
