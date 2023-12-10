@@ -26,6 +26,9 @@ pipeline {
 
         stage('Build Docker image') {
             steps {
+                sh "whoami"
+                sh "pwd"
+                sh "ls"
                 sh "docker build -t bhagavan147/mule-docker-hello:v1 ."
                 echo "Docker Image created..."
             }
