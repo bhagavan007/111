@@ -51,17 +51,17 @@ pipeline {
 
         stage('Docker deployment in container') {
             steps {
-                sh "docker run -d -i -t --name hello_111 -p 8081:8081 bhagavan147/mule-docker-hello:v1"
+                sh "docker run -d --name hello_111 -p 8000:8091 bhagavan147/mule-docker-hello:v1"
                 echo "Docker Container created..."
             }
         }
 
-        stage('Archiving'){
-            steps{
-                archiveArtifacts "**/target/*.jar"
-                echo "Archieved jar file"
-            }
-        }
+        // stage('Archiving'){
+        //     steps{
+        //         archiveArtifacts "**/target/*.jar"
+        //         echo "Archieved jar file"
+        //     }
+        // }
         
     }
 }

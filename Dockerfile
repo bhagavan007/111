@@ -15,7 +15,7 @@ COPY target/111-1.0.0-SNAPSHOT-mule-application.jar 111.jar
 # Define volume mount points for logs, apps, and domains
 VOLUME ["/Mule/mule-standalone-4.4.0/logs", "/Mule/mule-standalone-4.4.0/apps", "/Mule/mule-standalone-4.4.0/domains"]
 
-EXPOSE 8081
+EXPOSE 8091
 
 # Start Mule runtime
 CMD ["./mule-standalone-4.4.0/bin/mule"]
